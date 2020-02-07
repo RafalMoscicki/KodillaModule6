@@ -4,6 +4,7 @@ import com.kodilla.testing.collection.OddNumbersExterminator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class TestingMain {
@@ -27,8 +28,8 @@ public class TestingMain {
 //            System.out.println("error");
 //        }
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        ArrayList<Integer> arrayList = initArrayList(10);
-        ArrayList<Integer> oddArrayList = oddNumbersExterminator.exterminate(arrayList);
+        List<Integer> arrayList = initArrayList(10);
+        List<Integer> oddArrayList = oddNumbersExterminator.exterminate(arrayList);
         System.out.println(Arrays.toString(oddArrayList.toArray()));
 
     }
