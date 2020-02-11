@@ -1,10 +1,11 @@
 package com.kodilla.testing;
 
-import com.kodilla.testing.collection.OddNumbersExterminator;
+import com.kodilla.testing.Shapes.Circle;
+import com.kodilla.testing.Shapes.ShapeCollector;
+import com.kodilla.testing.Shapes.Square;
+import com.kodilla.testing.Shapes.Triangle;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 public class TestingMain {
@@ -27,10 +28,13 @@ public class TestingMain {
 //        } else {
 //            System.out.println("error");
 //        }
-        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        List<Integer> arrayList = initArrayList(10);
-        List<Integer> oddArrayList = oddNumbersExterminator.exterminate(arrayList);
-        System.out.println(Arrays.toString(oddArrayList.toArray()));
+        ShapeCollector shapeCollector = new ShapeCollector();
+        shapeCollector.addFigure(new Circle(4.18));
+        shapeCollector.addFigure(new Triangle(4, 3.2));
+        shapeCollector.addFigure(new Square(2.0));
+
+        shapeCollector.showFigures();
+        shapeCollector.getFigure(3);
 
     }
 
