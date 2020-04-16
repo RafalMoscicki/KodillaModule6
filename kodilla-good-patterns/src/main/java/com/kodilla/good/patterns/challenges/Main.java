@@ -3,7 +3,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MovieStore movieStore = new MovieStore();
-        movieStore.printMap(movieStore.getMovies());
+        OrderRequest orderRequest = new OrderRequest(new User("Pixel", "Ford"), "food", 6);
+        ProductOrderService productOrderService = new ProductOrderService(new InformationServiceImpl(), new OrderServiceImpl(), new OrderRepositoryImpl());
+        productOrderService.process(orderRequest);
+
     }
 }
